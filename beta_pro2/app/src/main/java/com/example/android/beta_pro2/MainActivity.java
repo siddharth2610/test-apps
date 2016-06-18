@@ -14,6 +14,7 @@ import android.provider.ContactsContract.RawContacts;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -52,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
                 .withValue(Phone.NUMBER, strNumber) // Number to be added
                 .withValue(Phone.TYPE, Phone.TYPE_MOBILE).build()); //Type like HOME, MOBILE etc
 
+        Context context = getApplicationContext();
+        CharSequence text = strDisplayName+" added to Contacts" ;
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
         try
         {
             // We will do batch operation to insert all above data
@@ -68,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         {
             //logs
         }
+        return;
 
     }
 
@@ -83,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         String str=name.getText().toString();
         String strn=num.getText().toString();
         WritePhoneContact(str, strn,cntx);
+        name.setText("");
+        num.setText("");
 
     }
 
