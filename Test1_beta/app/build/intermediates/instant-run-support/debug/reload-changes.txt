@@ -1,0 +1,2 @@
+CHANGED,C:\Users\Shiwansh\AndroidStudioProjects\Test1\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Shiwansh\AndroidStudioProjects\Test1\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\tag\photocaptureandgallery\MainActivity$override.class
